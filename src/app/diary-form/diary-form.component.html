@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="onSubmit()" [formGroup]='diaryForm'>
+            <div class="form-group">
+                <label for="date">Test Date</label>
+                <input class="form-control" formControlName="testdate" type="text">
+
+                <label for="entry">Match Type</label>
+                <input class="form-control" formControlName="matchtype" type="text">
+
+                <label for="team">Team</label>
+                <input class="form-control" formControlName="team" type="text">
+
+                <label for="player">Player</label>
+                <input class="form-control" formControlName="player" type="text">
+                <label for="runs">Runs Scored</label>
+                <input class="form-control" formControlName="runs" type="text">
+                <label for="balls">Balls Played</label>
+                <input class="form-control" formControlName="balls" type="text">
+                <label for="fours">Fours</label>
+                <input class="form-control" formControlName="fours" type="text">
+                <label for="sixes">Sixes</label>
+                <input class="form-control" formControlName="sixes" type="text">
+                <label for="strike">Strike Rate</label>
+                <input class="form-control" formControlName="strike" type="text">
+                <label for="wickets">Wickets</label>
+                <input class="form-control" formControlName="wickets" type="text">
+                <label for="conceded">Runs Conceded</label>
+                <input class="form-control" formControlName="conceded" type="text">
+
+
+
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>

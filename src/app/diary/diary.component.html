@@ -1,0 +1,48 @@
+<div class="p-3 mb-2 bg-dark text-white">
+<div class="row">
+    <div class="col">
+        <h4>Match Data</h4>
+        
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Test Date</th>
+                <th>Match Type</th>
+                <th>Team</th>
+                <th>Player</th>
+                <th>Runs Scored</th>
+                <th>Balls Played</th>
+                <th>Fours</th>
+                <th>Sixes</th>
+                <th>Strike Rate</th>
+                <th>Wickets</th>
+                <th>Runs Conceded</th>
+                <th *ngIf="isAuthenticated">Action</th>
+
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let diary of diaryEntries; let i = index'>
+                    <td>{{diary.testdate}}</td>
+                    <td>{{diary.matchtype}}</td>
+                    <td>{{diary.team}}</td>
+                    <td>{{diary.player}}</td>
+                    <td>{{diary.runs}}</td>
+                    <td>{{diary.balls}}</td>
+                    <td>{{diary.fours}}</td>
+                    <td>{{diary.sixes}}</td>
+                    <td>{{diary.strike}}</td>
+                    <td>{{diary.wickets}}</td>
+                    <td>{{diary.conceded}}</td>
+                    <td *ngIf="isAuthenticated">
+                        <button class="btn btn-primary" (click)="onEdit(diary.id)">Edit</button>   
+                        <button class="btn btn-danger" (click)='onDelete(diary.id)'>Delete</button>
+                    </td>
+                </tr>   
+            </tbody>
+        
+        </table>
+
+    </div>
+</div>
+</div>
